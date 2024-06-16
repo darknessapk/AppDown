@@ -19,21 +19,42 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="မြန်မာနိုင်ငံရဲ့ အကောင်းဆုံး ယုံကြည်စိတ်ချရတဲ့ Movie App တစ်ခုဖြစ်ပါသည် နောက်ဆုံးထွက်လူကြီးကြိုက်တွေပါ မြန်မာစာတန်းထိုးနဲ့ ကြည့်ရှုနိုင်တာမို့ Blue TV PRO App လေးကို ယခုပဲ Download ဆွဲပြီး ရယူလိုက်ပါ">
+  <meta name="description" content="A new Flutter project.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="blue_tv_pro">
+  <meta name="apple-mobile-web-app-title" content="myan_play">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>Blue TV Pro</title>
-  <link rel="manifest" href="https://raw.githubusercontent.com/darknessapk/AppDown/main/manifest.json">
+  <title>myan_play</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "4203080836";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 <body>
-  <script src="https://raw.githubusercontent.com/darknessapk/AppDown/main/flutter_bootstrap.js" async></script>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
